@@ -19,9 +19,9 @@ already up to date. It will create all frames at frames/
 
 ## Credits
 
-* (Mat Leornard)[https://medium.com/udacity/creating-map-animations-with-python-97e24040f17b]
+* [Mat Leornard](https://medium.com/udacity/creating-map-animations-with-python-97e24040f17b)
 
-* (WorldCubeAssociation API)[https://www.worldcubeassociation.org/api/v0/]
+* [WorldCubeAssociation API](https://www.worldcubeassociation.org/api/v0/)
 
 * matplotlib and cartopy documentation.
 
