@@ -2,6 +2,7 @@ from getcomps import update_competitions, load_all_competitions
 from preparecomps import get_competitions_by_day
 from plotcomps import generate_maps
 
+from time import time
 
 FILENAME = 'competitions.json'
 INITIAL_DATE = '2019-01-01'
@@ -9,6 +10,7 @@ INITIAL_DATE = '2019-01-01'
 
 def main():
     s = FILENAME if input("U to update, or anything to load: ").upper() != 'U' else ''
+    i = time()
 
     if s == '':
         all_comps = update_competitions(INITIAL_DATE)
@@ -19,6 +21,8 @@ def main():
 
     generate_maps(comps_by_day)
 
+    i = int(time() - i)
+    print("Total time: %0dm%2ds" % (i // 60, i % 60))
     return
 
 

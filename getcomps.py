@@ -1,6 +1,6 @@
 import requests
 import json
-from datetime import date, timedelta
+from datetime import date
 
 
 def load_all_competitions(file_name):
@@ -41,9 +41,9 @@ def check_cancelled(d, c):
     elif date(2020, 4, 20) <= end <= date(2020, 6, 1):
         c['stop'] = '2020-03-31'
 
-    # for competitions who cancelled themselfs
+    # for competitions who cancelled themselves
     elif end <= date(2020, 7, 3):
-        c['stop'] = end.isoformat()
+        c['stop'] = d['registration_close'].split('T')[0]
 
     else:
         c['stop'] = c['stop'].split("T")[0]
